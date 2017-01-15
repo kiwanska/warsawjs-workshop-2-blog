@@ -12,21 +12,19 @@
             <h1>add new</h1>
             <form>
                 <label>your title</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="postTitle">
                 <label>your content</label>
-                <textarea class="form-control"></textarea>
-                <input type="submit" class="btn btn-default">
+                <textarea class="form-control" name="postContent"></textarea>
+                <input type="submit" class="btn btn-primary">
             </form>
         </section>
     </script>
     <script type="text/html" id="post-component">
         <section>
-            <h1>posts</h1>
-            <div class="post">
-                <h2>post title</h2>
-                <p>post content</p>
+            <div class="post" id={{id}}>
+                <h1><a href="/#!/posts/{{id}}">{{postTitle}}</a></h1>
+                <p>{{postContent}}</p>
             </div>
-
         </section>
     </script>
 
@@ -35,12 +33,13 @@
 </body>
 
 <script src="node_modules/mustache/mustache.js"></script>
+<script src="node_modules/super-event-emitter/dist/super-event-emitter.js"></script>
+<script src="node_modules/grapnel/dist/grapnel.min.js"></script>
+<script src="http://wzrd.in/standalone/uuid@latest"></script>
 <script src="scripts/blog.js"></script>
 <script src="scripts/components/post-add-form-component.js"></script>
 <script src="scripts/components/post-component.js"></script>
-<script src="scripts/models/post-list-model.js"></script>
-<script src="scripts/models/post-model.js"></script>
-<script src="scripts/main.js"></script>
 <script src="scripts/controllers/post-controller.js"></script>
+<script src="scripts/main.js"></script>
 
 </html>

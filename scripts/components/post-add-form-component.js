@@ -6,6 +6,21 @@
             this.template = document.querySelector('#post-add-form-component').innerHTML;
             this.$container = document.querySelector('.container');
             this.render(data);
+            this.addListeners();
+        }
+
+        addListeners() {
+            const $form = this.$container.querySelector('form');
+
+            $form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let data = new FormData($form);
+                let formDataObject = {};
+                for (let [k, v] of data) {
+                    formDataObject[k] = v;
+                }
+                window.blog.runtime.trigger('form-sent', formDataObject);
+            })
         }
 
         render (data) {

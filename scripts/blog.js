@@ -1,5 +1,8 @@
 window.blog = {
-    models: {},
     components: {},
-    controllers: {}
+    controllers: {},
+    runtime: new EventEmitter(),
+    router: new Grapnel({
+        hashBang: true
+    })
 }
