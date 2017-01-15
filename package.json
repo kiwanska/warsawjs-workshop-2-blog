@@ -1,0 +1,7 @@
+{
+  "name": "kiwanska-blog",
+  "version": "0.0.1",
+  "devDependencies": {
+    "mustache": "^2.3.0"
+  }
+}
