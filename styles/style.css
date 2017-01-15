@@ -4,12 +4,13 @@ body, html, * {
 }
 
 body {
-    background-color: aquamarine;
+    background-color: #3CE7A2;
 }
 
 .container {
     width: 100%;
     max-width: 600px;
+    margin: 0 auto;
 }
 
 input, textarea {
